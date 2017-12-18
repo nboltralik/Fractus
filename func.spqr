@@ -1,0 +1,18 @@
+!! Church numerals - shows functions are first class objects
+
+  praenomino inc incognita(x) {
+    + x 1;
+  }
+
+  praenomino nullum incognita() {
+    0;
+  }
+
+  praenomino IV incognita(f, base) {
+    exequor f(exequor f(exequor f(exequor f(exequor base()))));
+  }
+
+  praenomino tmp = exequor IV(inc, nullum);
+  exequor scribo("The fourth church numeral is: ");
+  exequor scribo(tmp);
+  exequor scribo();

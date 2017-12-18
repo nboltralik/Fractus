@@ -1,0 +1,74 @@
+!!Translations
+!! si - if
+  !! aliud - otherwise/elseif
+  !! tandem - else
+!!dum - while
+!! praenomino - define
+!! incognita - unknown/lambda
+!! exequor - run, used for function calls
+!!UNIMPLEMENTED
+!! nullum - null
+!! et - and
+!! vel - or
+!! non - not
+
+!!  this is a comment
+
+
+!!  praenomino x = 3;
+!!  praenomino y = 4;
+!!  praenomino z = 0;
+!!  praenomino arr[5];
+!!  praenomino arr2[x];
+!!  praenomino f = "f";
+!!  praenomino fubar = "FUBAR";
+!!  praenomino foo = * + 5 - 2 1 ^ 4 2;
+
+!!  x = 45;
+!!  y = + 3 4;
+!!  z = - x y;
+!!arr[0] = 10;
+!!arr[4] = 50;
+!!arr[- 2 1] = 20;
+!!arr[x] = 40;
+!!arr[/ 4 2] = 30;
+!!x = arr[0];
+!!y = arr[1];
+!!z = arr[2];
+
+!!  arr2[x] = 0;
+!!  - x y;
+
+!!  dum (>= x 0) {
+!!    "YES";
+!!    x = - x 1;
+!!  }
+
+!!si (== x (+ y 38)) {
+!!  f = "IF";
+!!}
+!!aliud (== x y) {
+!!  f = "ELSEIF";
+!!}
+!!aliud (< x y) {
+!!  y = * y 2;
+!!}
+!!tandem {
+!!  f = "ELSE";
+!!}
+
+  exequor incognita(yo, ho, hoe) {
+    yo = (* yo 2);
+    ho = (* ho 3);
+    hoe = (% ho yo);
+  }(2, 3, 4);
+
+  exequor scribo("not so broken no is it?");
+  exequor scribo();
+
+!!  praenomino foo incognita (a, b, c) {
+!!    praenomino alpha = (+ a (* b c));
+!!    praenomino beta = (* b c);
+!!  }
+
+!!  exequor foo(2, x, y);

@@ -1,0 +1,15 @@
+!! Show working fibonacci function
+
+  praenomino fibb incognita(n) {
+    si (<= n 1) {
+      !! Returning unaries is supported in the grammer but there are some bugs...
+      n = n;
+    } tandem {
+      (+ exequor fibb(- n 1) exequor fibb(- n 2));
+    }
+  }
+
+  praenomino foo = exequor fibb(7);
+  exequor scribo("The seventh fibonacci number is: ");
+  exequor scribo(foo);
+  exequor scribo();

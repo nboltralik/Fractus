@@ -1,0 +1,88 @@
+//Nick Boltralik, 2017
+
+//FUNCTIONS
+//---------------------------------------------------
+lambda: LAMBDA OPEN_PAREN optExpressionList CLOSE_PAREN block
+
+statementList : statement statementList
+              | *empty*
+
+functionCall  : RUN VARIABLE OPEN_PAREN optExpressionList CLOSE_PAREN
+              : RUN lambda OPEN_PAREN optExpressionList CLOSE_PAREN
+
+statement : functionCall SEMICOLON
+          | assignment
+          | expression SEMICOLON
+          | ifStatement
+          | whileLoop
+          | lambda
+          | variableDef
+
+//BASIC EXPRESSIONS
+//---------------------------------------------------
+expression :  unary
+           |  operator expression expression
+           |  functionCall
+
+assignment : VARIABLE ASSIGN expression SEMICOLON
+           : VARIABLE OPEN_SQUARE expression CLOSE_SQUARE ASSIGN expression SEMICOLON
+
+operator  : PLUS
+          | MINUS
+          | MULTIPLY
+          | DIVIDE
+          | EXPONENTIATE
+          | MODULO
+          | LT
+          | GT
+          | LT_EQUAL
+          | GT_EQUAL
+          | EQUAL
+          | N_EQUAL
+          | AND
+          | OR
+          | NOT //Currently only applies to the first arg
+
+unary      :  INTEGER
+           |  VARIABLE
+           |  VARIABLE OPEN_SQUARE expression CLOSE_SQUARE   //array, allows negative indices
+           |  OPEN_PAREN expression CLOSE_PAREN
+           |  STRING
+
+optExpressionList : expression
+                  | expression COMMA optExpressionList
+                  | *empty*
+
+//DEFINITIONS
+variableDef : integerDef
+            | arrayDef
+            | functionDef
+            | stringDef
+            | nullDef
+
+integerDef : DEFINE VARIABLE ASSIGN expression SEMICOLON
+arrayDef  :  DEFINE VARIABLE OPEN_SQUARE unary CLOSE_SQUARE SEMICOLON
+functionDef : DEFINE VARIABLE lambda
+stringDef :  DEFINE VARIABLE ASSIGN STRING SEMICOLON
+nullDef : DEFINE VARIABLE SEMICOLON
+
+//IF STATEMENT
+//---------------------------------------------------
+ifStatement : IF OPEN_PAREN expression CLOSE_PAREN block optElseIf optElse
+
+block : statement
+      | OPEN_CURL statementList CLOSE_CURL
+
+optElseIf : ELSEIF OPEN_PAREN expression CLOSE_PAREN block optElseIf
+          | *empty*
+
+optElse : ELSE block
+        | *empty*
+
+//WHILE LOOP
+//---------------------------------------------------
+whileLoop : WHILE OPEN_PAREN expression CLOSE_PAREN block
+
+//TODO - other structures
+//LIST
+//SWITCH CASE

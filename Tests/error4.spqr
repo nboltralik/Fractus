@@ -1,0 +1,7 @@
+praenomino y = "Salve Mundi!";
+!! Dimensioning an array with incompatible size
+praenomino arr["200"];
+
+si (+ 1 5) {
+  exequor print(y);
+}

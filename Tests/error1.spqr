@@ -1,0 +1,7 @@
+praenomino y = "Salve Mundi!";
+!!Missing semicolon on the following line
+praenomino x = 5
+
+si (== x 5) {
+  exequor print(y);
+}

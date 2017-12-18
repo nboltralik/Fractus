@@ -1,0 +1,24 @@
+!! Change month and date as necessary
+
+praenomino month = 12;
+praenomino date = 20;
+praenomino message;
+
+si (== month 12) {
+
+  si (& (>= date 17) (<= date 23)) {
+    message = "IT'S SATURNALIA!";
+  } aliud (& (< date 17) (> date 0)) {
+    message = "Almost there";
+  } aliud (& (> date 23) (< date 32)) {
+    message = "Too late";
+  } tandem {
+    message = "How many days do you think are in December";
+  }
+
+} tandem {
+  message = "There are holidays in other months";
+}
+
+exequor scribo(message);
+exequor scribo();

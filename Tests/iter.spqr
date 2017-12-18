@@ -1,0 +1,19 @@
+!! Change x and y as necessary
+
+praenomino x = 5;
+praenomino y = 5;
+
+dum (> x 0) {
+  dum (> y 0) {
+    exequor scribo("y is: ");
+    exequor scribo(y);
+    exequor scribo();
+    exequor scribo("x is: ");
+    exequor scribo(x);
+    exequor scribo();
+    exequor scribo();
+    y = - y 1;
+  }
+  x = - x 1;
+  y = x;
+}

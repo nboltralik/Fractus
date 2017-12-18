@@ -1,0 +1,6 @@
+!!Shows keyword RUN without a VARIABLE or LAMBDA
+
+praenomino y = "Salve Mundi!";
+si (== exequor) {
+  exequor scribo(y);
+}

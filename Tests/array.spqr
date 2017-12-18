@@ -1,0 +1,37 @@
+!! Fun with arrays
+
+!! dimensioning with an integer
+praenomino arr1[10];
+praenomino tmp = 20;
+
+!! dimensioning with a variable (strings not allowed)
+praenomino arr2[tmp];
+
+exequor scribo(arr1);
+exequor scribo();
+exequor scribo(arr2);
+exequor scribo();
+exequor scribo("Setting arrays");
+exequor scribo();
+exequor scribo();
+
+!! Expressions can be used for indices
+dum (> tmp 0) {
+  arr2[- tmp 1] = tmp;
+  tmp = (- tmp 1);
+}
+
+tmp = 20;
+dum (> tmp 0) {
+  tmp = (- tmp 2);
+  !! Values can be retrieved
+  arr1[/ tmp 2] = (% arr2[+ tmp 1] 3);
+}
+
+exequor scribo(arr1);
+exequor scribo();
+exequor scribo("arr1[0] is: ");
+exequor scribo(arr1[0]);
+exequor scribo();
+exequor scribo(arr2);
+exequor scribo();

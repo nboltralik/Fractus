@@ -1,8 +1,0 @@
-praenomino y = "Salve Mundi!";
-
-!!Missing closing parenthesis on the following line
-praenomino x = (+ 2 3;
-
-si (== x 5) {
-  exequor print(y);
-}

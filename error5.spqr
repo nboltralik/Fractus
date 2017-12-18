@@ -1,8 +1,0 @@
-praenomino y = "Salve Mundi!";
-
-!!Type mismatch
-(+ 1 "String");
-
-si (== 3 5) {
-  exequor print(y);
-}

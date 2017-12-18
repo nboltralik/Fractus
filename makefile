@@ -1,8 +1,6 @@
 OBJS = lexer.o parser.o environment.o evaluator.o scanner.o types.o pretty.o
 OOPTS = -Wall -Wextra -g -c
 
-#I don't get a compiler errors with or without -lm so
-#hopefully this is where it goes
 all	:	$(OBJS)
 		gcc -Wall -Wextra -g -o Fractus $(OBJS) -lm
 
@@ -92,4 +90,4 @@ types.o	:	types.h types.c
 pretty.o	:	pretty.c pretty.h
 					gcc $(OOPTS) pretty.c
 clean	:
-			rm -f *.o Fractus
+			rm -f *.o

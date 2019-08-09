@@ -8,7 +8,6 @@ It is dynamically typed and, as the name implies, fundamentally broken.
 Source code files should end in .spqr
 
 
-
 ## Format
 
 #### Translations
@@ -23,7 +22,7 @@ Fractus would hardly be a Latin-themed language if it were not written in Latin.
 * run -> *exequor* (to execute)
 
 #### Comments
-A single exclamation point symbolizes the Boolean NOT.  Two exclamation points is a double negative which confuses the interpreter.  It chooses to ignore what it does not understand and thus comments are created.
+A single exclamation point symbolizes the Boolean NOT.  Two exclamation points would be NOT NOT, which is a double negative, and that confuses the interpreter.  It chooses to ignore what it does not understand and thus comments are created.
 
     !!  This is a comment
 
@@ -102,16 +101,17 @@ While statements follow the format:
 ---
 ## Why You Should Use Fractus
 1. It's unique.  
-There is only one other Latin programming language ever written, [Lusus](https://en.wikipedia.org/wiki/Lusus_(programming_language), and there is more documentation on wikipedia than the language's website.
+There is only one other Latin programming language ever written, [Lusus](https://en.wikipedia.org/wiki/Lusus_(programming_language)), and there is more documentation on wikipedia than the language's website.
 2. You want to learn exactly seven words of Latin: no more, no less, and proper grammar does not concern you.
 3. You believe that no language that is easy to use is worth using.
 
 ### Quotes about Fractus
 
 > "Who wrote this crap?" - Me   
-> "I know I fixed *that*!" - Also me  
+> "I could have sworn I just fixed that!" - Also me  
+> "Ok I did fix this problem earlier, why is it happening again?" - (you guessed it) Me
 > "I thought code was ones and zeros" - a friend  
-> "How is it a language if you can't speak it?" - another friend  
+> "I don't understand, how is it a language if you can't speak it?" - another friend  
 > "Looks great sweetie" - My mother
 
 

@@ -108,8 +108,9 @@ There is only one other Latin programming language ever written, [Lusus](https:/
 ### Quotes about Fractus
 
 > "Who wrote this crap?" - Me   
-> "I could have sworn I just fixed that!" - Also me  
-> "Ok I did fix this problem earlier, why is it happening again?" - (you guessed it) Me
+> "I could have sworn I just fixed this problem!" - Also me  
+> "Ok so I did fix the problem earlier, why is it happening again?" - (you guessed it) Me
+
 > "I thought code was ones and zeros" - a friend  
 > "I don't understand, how is it a language if you can't speak it?" - another friend  
 > "Looks great sweetie" - My mother
